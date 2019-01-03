@@ -182,7 +182,7 @@ open class ImageSlideshow: UIView {
     fileprivate var scrollViewImages = [InputSource]()
 
     /// Transitioning delegate to manage the transition to full screen controller
-    open fileprivate(set) var slideshowTransitioningDelegate: ZoomAnimatedTransitioningDelegate?
+    open public(set) var slideshowTransitioningDelegate: ZoomAnimatedTransitioningDelegate?
     
     var primaryVisiblePage: Int {
         return scrollView.frame.size.width > 0 ? Int(scrollView.contentOffset.x + scrollView.frame.size.width / 2) / Int(scrollView.frame.size.width) : 0
